@@ -1,5 +1,12 @@
 # Pizza Order V 2.0
 
+Update version that able to order and customize pizza by adding/removing topping and showing pizza order details using:
+
+Object Oriented Programming (OOP).
+
+Design Patterns (Abstract Factory - Factory Method - Singleton - Builder - State - Observer).
+
+
 ![Capture](https://user-images.githubusercontent.com/83149494/213840926-f4017b72-15e2-42f3-9c7a-5592ea437341.PNG)
 
 ![Capture1](https://user-images.githubusercontent.com/83149494/213840928-22bcc184-0887-49f4-908f-6f3a8c9e71fa.PNG)
