@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="_Pizza\Meat_Pizza\**" />
+    <Compile Remove="_Pizza\NewFolder\**" />
+    <Compile Remove="_Pizza\Veggie_Pizza\**" />
+    <EmbeddedResource Remove="_Pizza\Meat_Pizza\**" />
+    <EmbeddedResource Remove="_Pizza\NewFolder\**" />
+    <EmbeddedResource Remove="_Pizza\Veggie_Pizza\**" />
+    <None Remove="_Pizza\Meat_Pizza\**" />
+    <None Remove="_Pizza\NewFolder\**" />
+    <None Remove="_Pizza\Veggie_Pizza\**" />
+  </ItemGroup>
+
+</Project>

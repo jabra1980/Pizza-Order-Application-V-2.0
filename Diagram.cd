@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Fast_Food_Builder.Program">
+    <Position X="31.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fast_Food_Builder._Pizza.Pizza">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEEAAAAAgEACAoAACASAAAERAA6AgAMACACAAIgA=</HashCode>
+      <FileName>_Pizza\Pizza.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fast_Food_Builder._Pizza.MeatPizzaBuilder">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <AssociationLine Name="waitersObs" Type="Fast_Food_Builder._Observer.WaitersObs" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.438" />
+        <Point X="10.094" Y="1.438" />
+        <Point X="10.094" Y="7.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAQAAAQAAAAkAAAAABAAABBAQACFQA=</HashCode>
+      <FileName>_Pizza\MeatPizzaBuilder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pizza" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="waitersObs" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Fast_Food_Builder._Pizza.VeggiePizzaBuilder">
+    <Position X="3.25" Y="5.25" Width="1.5" />
+    <AssociationLine Name="waitersObs" Type="Fast_Food_Builder._Observer.WaitersObs" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="5.596" />
+        <Point X="6.101" Y="5.596" />
+        <Point X="6.101" Y="4.754" />
+        <Point X="7.417" Y="4.754" Type="JumpStart" />
+        <Point X="7.583" Y="4.754" Type="JumpEnd" />
+        <Point X="8.968" Y="4.754" />
+        <Point X="8.968" Y="7.662" />
+        <Point X="9.75" Y="7.662" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAQAAAQAAAAkAAAAABAAABBAQACFQA=</HashCode>
+      <FileName>_Pizza\VeggiePizzaBuilder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pizza" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="waitersObs" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Fast_Food_Builder._Observer.CustomerObs">
+    <Position X="19" Y="3.25" Width="1.5" />
+    <InheritanceLine Type="Fast_Food_Builder._Observer.WaitersObs" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.938" Y="7.5" />
+        <Point X="10.938" Y="1.05" />
+        <Point X="19.625" Y="1.05" />
+        <Point X="19.625" Y="3.25" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="orderCurrent" Type="Fast_Food_Builder._State.OrderState" FixedFromPoint="true">
+      <Path>
+        <Point X="19.75" Y="5.704" />
+        <Point X="19.75" Y="6.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQIAAAAAAAAEAAAAAAAABAAAAAAAAQAAAAAAAAAAAI=</HashCode>
+      <FileName>_Observer\CustomerObs.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="orderCurrent" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Fast_Food_Builder._Observer.WaitersObs">
+    <Position X="9.75" Y="7.5" Width="1.5" />
+    <AssociationLine Name="MeatPizzaBuilder" Type="Fast_Food_Builder._Pizza.MeatPizzaBuilder" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.5" Y="7.5" />
+        <Point X="10.5" Y="1" />
+        <Point X="4.75" Y="1" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="VeggiePizzaBuilder" Type="Fast_Food_Builder._Pizza.VeggiePizzaBuilder" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.75" Y="7.791" />
+        <Point X="8.577" Y="7.791" />
+        <Point X="8.577" Y="5.126" />
+        <Point X="7.583" Y="5.126" Type="JumpStart" />
+        <Point X="7.417" Y="5.126" Type="JumpEnd" />
+        <Point X="6.524" Y="5.126" />
+        <Point X="6.524" Y="6.066" />
+        <Point X="4.75" Y="6.066" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="MeatSandwichBuilder" Type="Fast_Food_Builder._Sandwich.MeatSandwichBuilder" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.75" Y="8.318" />
+        <Point X="9.008" Y="8.318" />
+        <Point X="9.008" Y="13.145" />
+        <Point X="7.333" Y="13.145" Type="JumpStart" />
+        <Point X="7.167" Y="13.145" Type="JumpEnd" />
+        <Point X="5.453" Y="13.145" />
+        <Point X="5.453" Y="12.062" />
+        <Point X="4.5" Y="12.062" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ViggieSandwichBuilder" Type="Fast_Food_Builder._Sandwich.ViggieSandwichBuilder" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.562" Y="8.603" />
+        <Point X="10.562" Y="17.375" />
+        <Point X="4.5" Y="17.375" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="sideDish" Type="Fast_Food_Builder._SideDish.SideDish" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.25" Y="8.438" />
+        <Point X="11.625" Y="8.438" />
+        <Point X="11.625" Y="10.573" />
+        <Point X="14" Y="10.573" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="beverage" Type="Fast_Food_Builder._Beverage.Beverage" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.25" Y="7.625" />
+        <Point X="11.625" Y="7.625" />
+        <Point X="11.625" Y="4.938" />
+        <Point X="14" Y="4.938" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AQQBAAAAAAARAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAE=</HashCode>
+      <FileName>_Observer\WaitersObs.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="MeatPizzaBuilder" />
+      <Field Name="VeggiePizzaBuilder" />
+      <Field Name="MeatSandwichBuilder" />
+      <Field Name="ViggieSandwichBuilder" />
+      <Field Name="sideDish" />
+      <Field Name="beverage" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Fast_Food_Builder._Sandwich.Sandwich">
+    <Position X="0.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEEAAAAAgEACAoAACASAEAERAA6AgBIACACAAIgA=</HashCode>
+      <FileName>_Sandwich\Sandwich.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fast_Food_Builder._Sandwich.MeatSandwichBuilder">
+    <Position X="3" Y="10.5" Width="1.5" />
+    <AssociationLine Name="waitersObs" Type="Fast_Food_Builder._Observer.WaitersObs" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.5" Y="11.438" />
+        <Point X="5.863" Y="11.438" />
+        <Point X="5.863" Y="12.716" />
+        <Point X="7.167" Y="12.716" Type="JumpStart" />
+        <Point X="7.333" Y="12.716" Type="JumpEnd" />
+        <Point X="8.595" Y="12.716" />
+        <Point X="8.595" Y="8.033" />
+        <Point X="9.75" Y="8.033" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAARAAAQAAAAkAAAAABAABBAAQACFAA=</HashCode>
+      <FileName>_Sandwich\MeatSandwichBuilder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="sandwich" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="waitersObs" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Fast_Food_Builder._Sandwich.ViggieSandwichBuilder">
+    <Position X="3" Y="15.25" Width="1.5" />
+    <AssociationLine Name="waitersObs" Type="Fast_Food_Builder._Observer.WaitersObs" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.5" Y="16.875" />
+        <Point X="10.188" Y="16.875" />
+        <Point X="10.188" Y="8.603" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAARAAAQAAAAkAAAAABAABBAAQACFAA=</HashCode>
+      <FileName>_Sandwich\VeggieSandwichBuilder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="sandwich" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="waitersObs" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Fast_Food_Builder._Pizza.PizzaChief">
+    <Position X="6.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAEAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_Pizza\PizzaChief.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="iPizzaBuilder" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Fast_Food_Builder._Sandwich.SandwichChief">
+    <Position X="6.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAIIAAAAAAAAAAAAA=</HashCode>
+      <FileName>_Sandwich\SandwichChief.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="iSandwichBuilder" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Fast_Food_Builder._Beverage.Beverage">
+    <Position X="14" Y="4.25" Width="1.5" />
+    <AssociationLine Name="waitersObs" Type="Fast_Food_Builder._Observer.WaitersObs" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.625" Y="6.896" />
+        <Point X="14.625" Y="7.875" />
+        <Point X="11.25" Y="7.875" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAhAAAYAAAAAQAAAAAAAABAAAAAAAAAEAA=</HashCode>
+      <FileName>_Beverage\Beverage.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="waitersObs" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Fast_Food_Builder._Beverage.Beverages">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_Beverage\Beverages.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fast_Food_Builder._SideDish.SideDish">
+    <Position X="14" Y="9.25" Width="1.5" />
+    <AssociationLine Name="waitersObs" Type="Fast_Food_Builder._Observer.WaitersObs" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.625" Y="9.25" />
+        <Point X="14.625" Y="8.188" />
+        <Point X="11.25" Y="8.188" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAgAgAAAQAAAAAQAAAAAAAABAAAAAAAAAEAA=</HashCode>
+      <FileName>_SideDish\SideDish.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="waitersObs" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Fast_Food_Builder._SideDish.SideDishs">
+    <Position X="14" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_SideDish\SideDishs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fast_Food_Builder._Abstruct_Factories.AbstructFoodFactory">
+    <Position X="28" Y="3.5" Width="1.5" />
+    <AssociationLine Name="meatFactory" Type="Fast_Food_Builder._Abstruct_Factories.MeatFactory" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="29.062" Y="5.632" />
+        <Point X="29.062" Y="6.625" />
+        <Point X="30.625" Y="6.625" />
+        <Point X="30.625" Y="7" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="veggieFactory" Type="Fast_Food_Builder._Abstruct_Factories.VeggieFactory" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="28.438" Y="5.632" />
+        <Point X="28.438" Y="5.863" />
+        <Point X="26.938" Y="5.863" />
+        <Point X="26.938" Y="7" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAARQAAAAAAAIAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>_Abstruct_Factories\AbstructFoodFactory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="meatFactory" />
+      <Field Name="veggieFactory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Fast_Food_Builder._Abstruct_Factories.MeatFactory">
+    <Position X="29.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>_Abstruct_Factories\MeatFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fast_Food_Builder._Abstruct_Factories.VeggieFactory">
+    <Position X="26.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>_Abstruct_Factories\VeggieFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fast_Food_Builder._Abstruct_Factories.AbstructBeverageFactory">
+    <Position X="25.5" Y="9.25" Width="1.5" />
+    <AssociationLine Name="coldBeverageFactory" Type="Fast_Food_Builder._Abstruct_Factories.ColdBeverageFactory" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="26.625" Y="10.546" />
+        <Point X="26.625" Y="11.238" />
+        <Point X="27.812" Y="11.238" />
+        <Point X="27.812" Y="12.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="hotdBeverageFactory" Type="Fast_Food_Builder._Abstruct_Factories.HotBeverageFactory" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="25.938" Y="10.546" />
+        <Point X="25.938" Y="11.292" />
+        <Point X="24.688" Y="11.292" />
+        <Point X="24.688" Y="12.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAQQAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>_Abstruct_Factories\AbstructBeverageFactory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="coldBeverageFactory" />
+      <Field Name="hotdBeverageFactory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Fast_Food_Builder._Abstruct_Factories.ColdBeverageFactory">
+    <Position X="26.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>_Abstruct_Factories\ColdBeverageFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fast_Food_Builder._Abstruct_Factories.HotBeverageFactory">
+    <Position X="24.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>_Abstruct_Factories\HotBeverageFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fast_Food_Builder._Abstruct_Factories.AbstructSideDishFactory">
+    <Position X="30.25" Y="9.25" Width="1.5" />
+    <AssociationLine Name="coldSideDishFactory" Type="Fast_Food_Builder._Abstruct_Factories.ColdSideDishFactory" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="31.375" Y="10.546" />
+        <Point X="31.375" Y="10.42" />
+        <Point X="32.875" Y="10.42" />
+        <Point X="32.875" Y="12.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="hotSideDishFactory" Type="Fast_Food_Builder._Abstruct_Factories.HotSideDishFactory" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="30.75" Y="10.546" />
+        <Point X="30.75" Y="11.224" />
+        <Point X="29.312" Y="11.224" />
+        <Point X="29.312" Y="12.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AQAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAACAAA=</HashCode>
+      <FileName>_Abstruct_Factories\AbstructSideDishFactory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="coldSideDishFactory" />
+      <Field Name="hotSideDishFactory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Fast_Food_Builder._Abstruct_Factories.ColdSideDishFactory">
+    <Position X="31.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_Abstruct_Factories\ColdSideDishFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fast_Food_Builder._Abstruct_Factories.HotSideDishFactory">
+    <Position X="29" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_Abstruct_Factories\HotSideDishFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fast_Food_Builder._State.OrderState">
+    <Position X="19" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_State\OrderState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fast_Food_Builder._State.CheckMenu">
+    <Position X="20.25" Y="8.75" Width="1.5" />
+    <InheritanceLine Type="Fast_Food_Builder._State.OrderState" FixedFromPoint="true">
+      <Path>
+        <Point X="20.125" Y="7.853" />
+        <Point X="20.125" Y="8.375" />
+        <Point X="21" Y="8.375" />
+        <Point X="21" Y="8.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAEAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>_State\CheckMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fast_Food_Builder._State.TakeOrder">
+    <Position X="17.75" Y="8.75" Width="1.5" />
+    <InheritanceLine Type="Fast_Food_Builder._State.OrderState" FixedFromPoint="true">
+      <Path>
+        <Point X="19.312" Y="7.853" />
+        <Point X="19.312" Y="8.375" />
+        <Point X="18.5" Y="8.375" />
+        <Point X="18.5" Y="8.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAQAAAAAAAQAA=</HashCode>
+      <FileName>_State\TakeOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fast_Food_Builder._State.UnderProcessOrder">
+    <Position X="17.75" Y="11.5" Width="1.5" />
+    <InheritanceLine Type="Fast_Food_Builder._State.OrderState" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="19.625" Y="7.853" />
+        <Point X="19.625" Y="11.125" />
+        <Point X="18.5" Y="11.125" />
+        <Point X="18.5" Y="11.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAEAAAAAAAAAAAAAAAAAAAQABAAgAAAAA=</HashCode>
+      <FileName>_State\UnderProcessOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fast_Food_Builder._State.AskCustomer">
+    <Position X="20.25" Y="11.5" Width="1.5" />
+    <InheritanceLine Type="Fast_Food_Builder._State.OrderState" FixedFromPoint="true">
+      <Path>
+        <Point X="19.875" Y="7.853" />
+        <Point X="19.875" Y="11.125" />
+        <Point X="21" Y="11.125" />
+        <Point X="21" Y="11.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAQAAQAAAAAAA=</HashCode>
+      <FileName>_State\AskCustomer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Fast_Food_Builder._Ibuilder.IPizzaBuilder">
+    <Position X="6.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAQAAAAkAAAAAAAAABAAQACBQA=</HashCode>
+      <FileName>_Ibuilder\IPizzaBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Fast_Food_Builder._Ibuilder.ISandwichBuilder">
+    <Position X="6.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAQAAAAkAAAAAAAABBAAQACBAA=</HashCode>
+      <FileName>_Ibuilder\ISandwichBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
